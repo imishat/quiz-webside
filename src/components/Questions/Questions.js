@@ -4,9 +4,9 @@ const Questions = ({questions}) => {
     const {id,options,question,correctAnswer}=questions;
 
     console.log(questions)
-    const right=(correctAnswer)=>{
-        console.log(id)
-        if(correctAnswer){
+    const right=(option)=>{
+        console.log(correctAnswer)
+        if(option==correctAnswer){
             alert('right')
         }
         else{
@@ -18,7 +18,7 @@ const Questions = ({questions}) => {
     return (
         <div>
             <h1>{question}</h1>
-            {options.map(options=><button onClick={()=>right(correctAnswer)}>{options}</button>)}
+            {options.map(option=><button onClick={()=>right(option)}>{option}</button>)}
  
         </div>
     );
