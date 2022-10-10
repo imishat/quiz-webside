@@ -1,10 +1,11 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Questions from '../Questions/Questions';
 import'./quizDittel.css'
 
 const QuizDittel = () => {
-    const detele=useLoaderData()
-    const questions=detele.data.questions
+    const ditile=useLoaderData()
+    const questions=ditile.data.questions;
     //console.log(
         
 
@@ -14,7 +15,9 @@ const QuizDittel = () => {
         
     return (
         <div>
-           <h1>hello</h1> 
+         {
+           questions.map(questions => <Questions questions ={questions} key={questions.id} ></Questions>)  
+         }
         </div>
     );
 };
