@@ -4,9 +4,9 @@ import Questions from '../Questions/Questions';
 import'./quizDittel.css'
 
 const QuizDittel = () => {
-    const data=useLoaderData();
+    const QuizData=useLoaderData();
 
-    const questions=data.data.questions;
+    const questions=  QuizData.data.questions;
     //console.log(
         
 

@@ -27,11 +27,12 @@ const Header = () => {
                 style={({ isActive }) =>
                 isActive ? {color:'black'} : {color:'white'}
               }
-            to="/"
+            to="quizs"
             
           >
             Quizs
           </NavLink>
+               
                 
                 <NavLink
                 style={({ isActive }) =>
@@ -40,7 +41,7 @@ const Header = () => {
             to="chat"
             
           >
-            Reachat
+            Recharts
           </NavLink>
           
                 

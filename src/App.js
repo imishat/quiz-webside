@@ -15,6 +15,10 @@ function App() {
     children:[
       {
         path:'/',
+        element:<Quizs></Quizs>
+      },
+      {
+        path:'quizs',
         loader:()=>fetch('https://openapi.programming-hero.com/api/quiz'),
 
         element:<Quizs></Quizs>

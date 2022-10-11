@@ -13,7 +13,7 @@ const Questions = ({questions}) => {
     
 
     console.log(questions)
-    // chake right or worng ans
+    // chake right or worng ans funtion
     function clike(option) {
         if (option === correctAnswer) {
         alert('Right Answer')
@@ -23,6 +23,12 @@ const Questions = ({questions}) => {
         else {
            alert('worng Answer')
         }
+
+    }
+    {/*show the answer in icon funtion */}
+    const answer=(correctAnswer)=>{
+    
+        alert(correctAnswer)
 
     }
 
@@ -37,16 +43,18 @@ const Questions = ({questions}) => {
              <div className='Quiz'>
             <div className='content'>
                 <div className='title'>
-                   
+                    {/* removed o tag form api and get question value*/}
                     {parse(`<h1>${question
 
                     }</>`)}
-                   <button > <FontAwesomeIcon className='icon' icon={faEyeSlash} /></button>
+                    {/*show answer in icon  */}
+                    <FontAwesomeIcon onClick={()=>answer(correctAnswer)} className='icon' icon={faEyeSlash} />
                 </div>
+                {/*get optino value  */}
                 {
                     options.map(option => <button className='quizans' onClick={() => clike(option)}>{option}</button>)
                 }
-                {/* */}
+                
             </div>
             <ToastContainer></ToastContainer>
 

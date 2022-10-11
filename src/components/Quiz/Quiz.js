@@ -1,9 +1,10 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import'./Quiz.css'
 
 const Quiz = ({ quiz}) => {
-   // console.log(quiz)
+   {/* disteccharing value form quiz*/}
     const{id,name,logo,total}=quiz;
     return (
         <section className="container">
@@ -14,8 +15,10 @@ const Quiz = ({ quiz}) => {
                 <h3>{name}</h3>
             
                 <button>
+                
                 <Link to={`/Quiz/${id}`}>Quiz</Link>
                 </button>
+                
             </div>
             </div>
 
