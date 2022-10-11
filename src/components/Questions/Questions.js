@@ -1,34 +1,58 @@
+import { faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { toast, ToastContainer } from 'react-toastify';
+import parse from 'html-react-parser';
+import'./qusiti.css'
 
 const Questions = ({questions}) => {
-    const {id,options,question,correctAnswer,name}=questions;
+    const {id,options,correctAnswer,question
+    }=questions;
     
        
     
 
     console.log(questions)
     // chake right or worng ans
-    const right=(option)=>{
+    function clike(option) {
+        if (option === correctAnswer) {
+        alert('Right Answer')
 
-        console.log(correctAnswer)
-        if(option===correctAnswer){
-            alert('right')
-           
-            
+
         }
-        else{
-            alert('worng answer')
+        else {
+           alert('worng Answer')
         }
 
     }
+
+    
+
+
+
+       
    
     return (
         <div>
-            <h1>{name}</h1>
-            <h1> Question :{question}</h1>
-            {options.map(option=><button onClick={()=>right(option)}>{option}</button>)}
-            <ToastContainer/>
+             <div className='Quiz'>
+            <div className='content'>
+                <div className='title'>
+                   
+                    {parse(`<h1>${question
+
+                    }</>`)}
+                   <button > <FontAwesomeIcon className='icon' icon={faEyeSlash} /></button>
+                </div>
+                {
+                    options.map(option => <button className='quizans' onClick={() => clike(option)}>{option}</button>)
+                }
+                {/* */}
+            </div>
+            <ToastContainer></ToastContainer>
+
+        </div>
+
+          
  
         </div>
     );

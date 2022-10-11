@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import'./header.css'
 
 
@@ -9,7 +9,7 @@ import'./header.css'
   
 
 const Header = () => {
-    
+  
 
     return (
         <div>
@@ -21,10 +21,29 @@ const Header = () => {
 
             </div>
             <div className=''>
-                <Link to="/shop">Home </Link>
-                <Link to="chat">Topics</Link>
-                <Link to="/shop">Blog</Link>
-                <Link to='/'>Quizs</Link>
+                
+                
+                <NavLink
+            to="/"
+            
+          >
+            Quizs
+          </NavLink>
+                
+                <NavLink
+            to="chat"
+            
+          >
+            Reachat
+          </NavLink>
+          
+                
+                <NavLink
+            to="blogs"
+            
+          >
+            Blogs
+          </NavLink>
 
             </div>
         </nav>

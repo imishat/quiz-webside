@@ -5,6 +5,7 @@ import Main from './Layout/Main';
 import Quizs from './components/Quizs/Quizs';
 import QuizDittel from './components/QuizDittel/QuizDittel';
 import Reachat from './components/reachat/Reachat';
+import Blogs from './components/Blogs/Blogs';
 
 function App() {
   const router=createBrowserRouter([
@@ -25,7 +26,13 @@ function App() {
       },
       {
         path:'chat',
-        element:<Reachat></Reachat>
+      
+        element:<Reachat></Reachat>,
+        loader:()=>fetch('https://openapi.programming-hero.com/api/quiz')
+      },
+      {
+        path:'blogs',
+        element:<Blogs></Blogs>
       }
     ]
   }

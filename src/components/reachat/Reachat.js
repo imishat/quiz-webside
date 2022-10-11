@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 import { Area, AreaChart, CartesianGrid, Tooltip, XAxis, YAxis } from 'recharts';
 
 const Reachat = () => {
@@ -29,8 +30,15 @@ const Reachat = () => {
         },
         
       ]
+      const chtaData=useLoaderData();
+      const value=chtaData.data
+
+      console.log(value)
     return (
         <div>
+
+
+            
             H!
             <h1>Reachat </h1>
             <AreaChart width={730} height={250} data={data}
@@ -45,9 +53,9 @@ const Reachat = () => {
       <stop offset="95%" stopColor="#82ca9d" stopOpacity={0}/>
     </linearGradient>
   </defs>
-  <XAxis dataKey="name" />
+  <XAxis dataKey='name' />
   <YAxis />
-  <CartesianGrid strokeDasharray="3 3" />
+  <CartesianGrid stromakeDasharray="3 3" />
   <Tooltip />
   <Area type="monotone" dataKey="uv" stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
   <Area type="monotone" dataKey="pv" stroke="#82ca9d" fillOpacity={1} fill="url(#colorPv)" />

@@ -1,0 +1,37 @@
+.Quiz {
+    /* border: 2px solid blue; */
+    align-items: center;
+    width: 50%;
+    margin: auto;
+    background-color: darkblue;
+    /* padding: 5px; */
+}
+
+.icon {
+    color: white;
+    margin: 20px;
+    font-size: 18px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content h1 {
+    color: white;
+}
+
+.content {
+    margin: 50px;
+    padding: 20px;
+    /* border: 2px solid black; */
+    /* box-shadow: 10px 10px 10px 2px white; */
+}
+
+.quizans {
+    padding: 20px;
+    margin: 20px;
+    font-size: 18px;
+}
