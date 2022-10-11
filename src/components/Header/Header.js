@@ -24,6 +24,9 @@ const Header = () => {
                 
                 
                 <NavLink
+                style={({ isActive }) =>
+                isActive ? {color:'black'} : {color:'white'}
+              }
             to="/"
             
           >
@@ -31,6 +34,9 @@ const Header = () => {
           </NavLink>
                 
                 <NavLink
+                style={({ isActive }) =>
+                isActive ? {color:'black'} : {color:'white'}
+              }
             to="chat"
             
           >
@@ -39,6 +45,9 @@ const Header = () => {
           
                 
                 <NavLink
+                style={({ isActive }) =>
+                isActive ? {color:'black'} : {color:'white'}
+              }
             to="blogs"
             
           >
