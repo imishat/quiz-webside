@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Main from './Layout/Main';
 import Quizs from './components/Quizs/Quizs';
 import QuizDittel from './components/QuizDittel/QuizDittel';
+import Reachat from './components/reachat/Reachat';
 
 function App() {
   const router=createBrowserRouter([
@@ -21,6 +22,10 @@ function App() {
 
         loader:({params})=>fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`),
         element:<QuizDittel></QuizDittel>
+      },
+      {
+        path:'chat',
+        element:<Reachat></Reachat>
       }
     ]
   }
