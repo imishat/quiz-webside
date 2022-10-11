@@ -6,6 +6,7 @@ import Quizs from './components/Quizs/Quizs';
 import QuizDittel from './components/QuizDittel/QuizDittel';
 import Reachat from './components/reachat/Reachat';
 import Blogs from './components/Blogs/Blogs';
+import Error from './components/ErrorPage/Error';
 
 function App() {
   const router=createBrowserRouter([
@@ -33,7 +34,8 @@ function App() {
       {
         path:'blogs',
         element:<Blogs></Blogs>
-      }
+      },
+      {path:'*', element:<Error></Error>}
     ]
   }
     
