@@ -1,4 +1,26 @@
+Project Nmae :quiz 
+live link:https://papaya-dusk-77065c.netlify.app/
+
+how you know form this side 
+1:you try more quiz
+2:you know about css javascript and git 
+3:reed some blogs form this side 
+i want to try pshu somthing new 
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
+
+
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
